@@ -10,13 +10,13 @@ class ClickThread : public QThread {
     Q_OBJECT
 
 public:
-    ClickThread(QList<Click*>);
+    ClickThread(QList<const Click*>);
     ~ClickThread();
 
     virtual void run();
 
 private:
-    QList<Click*> clicks;
+    QList<const Click*> clicks;
 
 signals:
     void clicksEnd(void);

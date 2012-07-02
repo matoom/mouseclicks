@@ -9,7 +9,7 @@
 #include <click.h>
 #include <windows.h>
 
-typedef QList<Click*> Clicks;
+typedef QList<const Click*> Clicks;
 
 class RecordThread : public QThread {
     Q_OBJECT
@@ -23,7 +23,7 @@ public:
 private:
     bool state;
     bool alt;
-    QList<Click*> clicks;
+    QList<const Click*> clicks;
     int prevManhattan;
 
     QPoint point;

@@ -8,7 +8,7 @@
 #include <clickthread.h>
 #include <recordThread.h>
 
-typedef QList<Click*> Clicks;
+typedef QList<const Click*> Clicks;
 Q_DECLARE_METATYPE(Clicks);
 
 class ClickThread;
@@ -26,7 +26,7 @@ public:
 private:
     ClickThread* clickThread;
     RecordThread* recordThread;
-    QList<Click*> clicks;
+    QList<const Click*> clicks;
 
     bool state;
 
